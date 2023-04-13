@@ -18,13 +18,13 @@
         }
 
         nav ul li {
+            width: 15%;
             display: inline-block;
-            margin-right: 20px;
         }
 
-        nav ul li:last-child {
+        /* nav ul li:last-child {
             margin-right: 0;
-        }
+        } */
 
         nav ul li a {
             display: block;
@@ -37,6 +37,13 @@
 
         nav ul li a:hover {
             background-color: #ddd;
+        }
+
+        @media screen and (max-width: 768px) {
+            nav ul li {
+                width: auto;
+                display: block;
+            }
         }
 
         /* 主視覺 */
@@ -69,6 +76,60 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 0 20px;
+        }
+
+        /* 工作經歷 */
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .experiences {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .experience {
+            display: flex;
+            align-items: center;
+            width: calc(50% - 20px);
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .competition {
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .text {
+            flex: 1;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .experience {
+                width: 100%;
+            }
         }
 
         /* 作品集 */
@@ -149,6 +210,12 @@
         .view-code:hover {
             background-color: #666;
         }
+
+        @media screen and (max-width: 768px) {
+            .portfolio-item {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -170,6 +237,41 @@
             <h1>Hi, I'm John</h1>
             <p>I'm a front-end developer with 3 years of experience.</p>
         </div>
+        <!-- 經歷 -->
+
+        <section>
+            <h2>工作經驗</h2>
+            <div class="experiences">
+                <div class="experience">
+                    <img src="your-image-url" alt="your-image-alt-text">
+                    <div class="text">
+                        <h3>公司名稱 / 職位</h3>
+                        <p>日期</p>
+                        <p>工作描述</p>
+                    </div>
+                </div>
+                <div class="experience">
+                    <img src="your-image-url" alt="your-image-alt-text">
+                    <div class="text">
+                        <h3>公司名稱 / 職位</h3>
+                        <p>日期</p>
+                        <p>工作描述</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>比賽</h2>
+            <div class="competition">
+                <img src="your-image-url" alt="your-image-alt-text">
+                <div class="text">
+                    <h3>比賽名稱 / 獎項</h3>
+                    <p>日期</p>
+                    <p>比賽描述</p>
+                </div>
+            </div>
+        </section>
 
         <!-- 作品集 -->
         <section class="portfolio">
