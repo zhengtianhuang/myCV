@@ -20,6 +20,7 @@
         nav ul li {
             width: 15%;
             display: inline-block;
+            margin-right: 0;
         }
 
         /* nav ul li:last-child {
@@ -215,6 +216,46 @@
             .portfolio-item {
                 width: 100%;
             }
+
+            .portfolio-item:last-child {
+                display: none;
+            }
+        }
+
+        /* 聯絡資訊 */
+        footer {
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        i {
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -312,33 +353,22 @@
                         enim. Morbi blandit urna vel risus malesuada, in bibendum arcu vestibulum.</p>
                     <a href="#" class="view-code">View Code</a>
                 </div>
-                <div class="portfolio-item">
-                    <h3>Project 3</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ultrices leo. Nulla et tellus
-                        enim. Morbi blandit urna vel risus malesuada, in bibendum arcu vestibulum.</p>
-                    <a href="#" class="view-code">View Code</a>
-                </div>
-                <div class="portfolio-item">
-                    <h3>Project 4</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ultrices leo. Nulla et tellus
-                        enim. Morbi blandit urna vel risus malesuada, in bibendum arcu vestibulum.</p>
-                    <a href="#" class="view-code">View Code</a>
-                </div>
-                <div class="portfolio-item">
-                    <h3>Project 5</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ultrices leo. Nulla et tellus
-                        enim. Morbi blandit urna vel risus malesuada, in bibendum arcu vestibulum.</p>
-                    <a href="#" class="view-code">View Code</a>
-                </div>
-                <div class="portfolio-item">
-                    <h3>Project 6</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ultrices leo. Nulla et tellus
-                        enim. Morbi blandit urna vel risus malesuada, in bibendum arcu vestibulum.</p>
-                    <a href="#" class="view-code">View Code</a>
-                </div>
             </div>
         </section>
     </main>
+
+    <footer>
+        <div class="container">
+            <div class="contact-info">
+                <h3>聯絡資訊</h3>
+                <ul>
+                    <li><i class="fa fa-phone"></i> 123-456-7890</li>
+                    <li><i class="fa fa-envelope"></i> example@email.com</li>
+                    <li><i class="fa fa-map-marker"></i> 地址</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
     <script>
 
