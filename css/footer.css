@@ -1,0 +1,40 @@
+/* 聯絡資訊 */
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+i {
+    margin-right: 10px;
+}
+
+.fa a {
+    color: #333;
+    text-decoration: none;
+}

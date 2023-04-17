@@ -1,274 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <style>
-        /* 導覽列 */
-        nav {
-            background-color: #f2f2f2;
-            padding: 10px;
-        }
-
-        nav ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            text-align: center;
-        }
-
-        nav ul li {
-            width: 15%;
-            display: inline-block;
-            margin-right: 0;
-        }
-
-        /* nav ul li:last-child {
-            margin-right: 0;
-        } */
-
-        nav ul li a {
-            display: block;
-            color: #333;
-            font-size: 18px;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-
-        nav ul li a:hover {
-            background-color: #ddd;
-        }
-
-        @media screen and (max-width: 768px) {
-            nav ul li {
-                width: auto;
-                display: block;
-            }
-        }
-
-        /* 主視覺 */
-        .hero {
-            position: relative;
-        }
-
-        .hero img {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-
-        .intro {
-            text-align: center;
-            margin-top: -50px;
-            padding: 50px 0;
-            background-color: #fff;
-        }
-
-        .intro h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .intro p {
-            font-size: 18px;
-            color: #666;
-            line-height: 1.5;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* 工作經歷 */
-        section {
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .experiences {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .experience {
-            display: flex;
-            align-items: center;
-            width: calc(50% - 20px);
-            margin-right: 20px;
-            margin-bottom: 20px;
-        }
-
-        img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            margin-right: 20px;
-        }
-
-        .text {
-            flex: 1;
-        }
-
-        h3 {
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-
-        p {
-            margin-bottom: 5px;
-        }
-
-        @media screen and (max-width: 768px) {
-            .experience {
-                width: 100%;
-            }
-        }
-
-        /* 作品集 */
-        .portfolio {
-            padding: 50px;
-            text-align: center;
-        }
-
-        .portfolio-grid {
-            height: 300px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .portfolio-item {
-            position: relative;
-            height: 100%;
-            width: calc(33.33% - 20px);
-            margin-bottom: 40px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-        }
-
-        .portfolio-item:hover .scrollable-content {
-            animation: scroll-up 5s linear infinite;
-        }
-
-        .scrollable-content {
-            /* height: 100%; */
-            overflow: hidden;
-            position: relative;
-        }
-
-        .scrollable-content:hover {
-            animation-play-state: paused;
-        }
-
-        @keyframes scroll-up {
-            0% {
-                top: 0;
-            }
-
-            100% {
-                top: -100%;
-            }
-        }
-
-        .portfolio-item h3 {
-            font-size: 24px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
-        .portfolio-item p {
-            /* height: 200%; */
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-
-        .view-code {
-            z-index: 999;
-            display: flex;
-            position: absolute;
-            left: 50%;
-            bottom: 10px;
-            transform: translate(-50%, 0%);
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .view-code:hover {
-            background-color: #666;
-        }
-
-        .iframe-wrapper {
-            display: flex;
-            justify-content: space-around;
-            margin: 20px 0;
-        }
-
-
-        @media screen and (max-width: 768px) {
-            .portfolio-item {
-                width: 100%;
-            }
-
-            .portfolio-item:last-child {
-                display: none;
-            }
-
-            .iframe-wrapper {
-                display: block;
-            }
-        }
-
-        /* 聯絡資訊 */
-        footer {
-            background-color: #f2f2f2;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .contact-info {
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        li {
-            margin-bottom: 5px;
-        }
-
-        i {
-            margin-right: 10px;
-        }
-
-        .fa a {
-            color: #333;
-            text-decoration: none;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/experience.css">
+    <link rel="stylesheet" href="./css/portfolio.css">
+    <link rel="stylesheet" href="./css/footer.css">
 </head>
 
 <body>
@@ -299,6 +42,7 @@
                     <div class="text">
                         <h3>宇安科技 / Project Engineer</h3>
                         <p>2019~2020</p>
+                        <a href="https://www.facebook.com/watch/?v=1694089940749244">Demo</a>
                         <p>One of the members of a startup team responsible for full-stack software development and
                             firmware testing.</p>
                     </div>
@@ -323,6 +67,8 @@
                     <div class="text">
                         <h3>全國田間機器人競賽 / Sixth place</h3>
                         <p>2018</p>
+                        <a href="https://m.facebook.com/story.php?story_fbid=534280234059200&id=2508142466085157">Demo
+                        </a>
                     </div>
                 </div>
                 <div class="experience">
@@ -339,22 +85,6 @@
                         <p>2021</p>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section>
-            <div class="iframe-wrapper">
-                <iframe
-                    src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fyuantechnology%2Fvideos%2F1694089940749244%2F&show_text=false&width=560&t=0"
-                    width="560" height="314" style="border:auto;overflow:hidden" scrolling="no" frameborder="0"
-                    allowfullscreen="true"
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                    allowFullScreen="true"></iframe>
-                <iframe
-                    src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fyuantechnology%2Fvideos%2F534280234059200%2F&show_text=false&width=560&t=0"
-                    width="560" height="314" style="border:auto;overflow:hidden" scrolling="no" frameborder="0"
-                    allowfullscreen="true"
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                    allowFullScreen="true"></iframe>
             </div>
         </section>
 
