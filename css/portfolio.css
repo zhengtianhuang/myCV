@@ -5,7 +5,7 @@
         }
 
         .portfolio-grid {
-            height: 300px;
+            height: 500px;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -14,49 +14,16 @@
         .portfolio-item {
             position: relative;
             height: 100%;
-            width: calc(33.33% - 20px);
+            width: calc(40% - 21px);
             margin-bottom: 40px;
             padding: 20px;
             border: 1px solid #ccc;
             box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
         }
-
-        .portfolio-item:hover .scrollable-content {
-            animation: scroll-up 5s linear infinite;
-        }
-
-        .scrollable-content {
-            /* height: 100%; */
-            overflow: hidden;
-            position: relative;
-        }
-
-        .scrollable-content:hover {
-            animation-play-state: paused;
-        }
-
-        @keyframes scroll-up {
-            0% {
-                top: 0;
-            }
-
-            100% {
-                top: -100%;
-            }
-        }
-
-        .portfolio-item h3 {
-            font-size: 24px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
-        .portfolio-item p {
-            /* height: 200%; */
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
+        .code-container {
+            overflow: auto;
+            height: 400px; /* 設置所需的高度，若內容超過該高度，將會出現垂直滾動條 */
+          }
 
         .view-code {
             z-index: 999;
@@ -73,15 +40,6 @@
             transition: background-color 0.3s ease;
         }
 
-        .view-code:hover {
-            background-color: #666;
-        }
-
-        .iframe-wrapper {
-            display: flex;
-            justify-content: space-around;
-            margin: 20px 0;
-        }
 
 
         @media screen and (max-width: 768px) {
