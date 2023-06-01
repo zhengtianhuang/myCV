@@ -63,7 +63,7 @@
             <h2>Compitition</h2>
             <div class="experiences">
                 <div class="experience">
-                    <img src="./statics/img/1_110.jpeg" alt="image">
+                    <img class="zoomable-image" src="./statics/img/1_110.jpeg" alt="image">
                     <div class="text">
                         <h3>全國田間機器人競賽 / Sixth place</h3>
                         <p>2018</p>
@@ -72,17 +72,24 @@
                     </div>
                 </div>
                 <div class="experience">
-                    <img src="./statics/img/tic100.jpg" alt="image">
+                    <img class="zoomable-image" src="./statics/img/tic100.jpg" alt="image">
                     <div class="text">
                         <h3>TIC100 / Nomination</h3>
                         <p>2020</p>
                     </div>
                 </div>
                 <div class="experience">
-                    <img src="./statics/img/dog.png" alt="image">
+                    <img class="zoomable-image" src="./statics/img/dog.png" alt="image">
                     <div class="text">
                         <h3>Tomofun Dog Sound Recognition AI Million Challenge / Sixtieth place</h3>
                         <p>2021</p>
+                    </div>
+                </div>
+                <div class="experience">
+                    <img class="zoomable-image" src="./statics/img/AI_class.jpg" alt="image">
+                    <div class="text">
+                        <h3>AI and Big Data Application Development Practical Training Program</h3>
+                        <p>2023</p>
                     </div>
                 </div>
             </div>
@@ -92,17 +99,17 @@
         <section class="portfolio" id="portfolio">
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <h3>Code 1</h3>  
+                    <h3>Code 1</h3>
                     <div class="code-container">
                         <script src="https://gist.github.com/zhengtianhuang/640d047e2ced799731fac166f39122b5.js"></script>
-                    </div> 
+                    </div>
                     <a href="https://github.com/zhengtianhuang/AI_project" class="view-code">View Code</a>
                 </div>
                 <div class="portfolio-item">
-                    <h3>Code 2</h3>  
+                    <h3>Code 2</h3>
                     <div class="code-container">
                         <script src="https://gist.github.com/zhengtianhuang/4042b735090f5a1a09ec5172a292ced9.js"></script>
-                    </div> 
+                    </div>
                     <a href="https://github.com/zhengtianhuang/AI_project" class="view-code">View Code</a>
                 </div>
             </div>
@@ -130,7 +137,12 @@
     </footer>
 
     <script>
-
+        // 在您的JavaScript程式碼中，可以使用之前提供的相同程式碼來實現圖片的放大功能。
+        document.querySelectorAll('.zoomable-image').forEach(function (image) {
+            image.addEventListener('click', function () {
+                this.classList.toggle('zoomed');
+            });
+        });
     </script>
 </body>
 
